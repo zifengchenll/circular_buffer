@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>circular_buffer api: circular_buffer/src/circular_buffer.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">circular_buffer api
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('circular__buffer_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">circular_buffer.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="circular__buffer_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// circular_buffer.h</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef CIRCULAR_BUFFER_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define CIRCULAR_BUFFER_H</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="port_8h.html">port.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// 策略宏定义（1 表示覆盖旧数据，0 表示丢弃新数据）</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="circular__buffer_8h.html#a38282810aad13589aaacca767acaca43">   10</a></span>&#160;<span class="preprocessor">#define CIRCULAR_BUFFER_OVERWRITE 0</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structcircular__buffer.html">   15</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="structcircular__buffer.html#a854352f53b148adc24983a58a1866d66">   17</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="structcircular__buffer.html#a854352f53b148adc24983a58a1866d66">size</a>;   </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structcircular__buffer.html#a52a8a99bfbb1c17e94e3a9f816d8f5ee">   18</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="structcircular__buffer.html#a52a8a99bfbb1c17e94e3a9f816d8f5ee">start</a>;  </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structcircular__buffer.html#aca05b1afbbe1c83cf087b49df03c441a">   19</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="structcircular__buffer.html#aca05b1afbbe1c83cf087b49df03c441a">end</a>;    </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structcircular__buffer.html#aff2566f4c366b48d73479bef43ee4d2e">   20</a></span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="structcircular__buffer.html#aff2566f4c366b48d73479bef43ee4d2e">buffer</a>;  </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structcircular__buffer.html#af585f83cf32ec2772c231ffaa4c40abd">   21</a></span>&#160;    <a class="code" href="port_8h.html#a6bfdd7a014fe4d4d6c392df201d822dd">mutex_t</a> <a class="code" href="structcircular__buffer.html#af585f83cf32ec2772c231ffaa4c40abd">mutex</a>; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;} <a class="code" href="structcircular__buffer.html">circular_buffer</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="circular__buffer_8h.html#a9152b651fcc9df8d25a0685ab07693c9">circular_buffer_init</a>(<a class="code" href="structcircular__buffer.html">circular_buffer</a> *cb, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">void</span> <a class="code" href="circular__buffer_8h.html#aaf1d119a647bd9d803c31ec96c3e2b71">circular_buffer_free</a>(<a class="code" href="structcircular__buffer.html">circular_buffer</a> *cb);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="circular__buffer_8h.html#a183a3993dd3352b6363dbf1208c585f4">circular_buffer_write</a>(<a class="code" href="structcircular__buffer.html">circular_buffer</a> *cb, <span class="keyword">const</span> <span class="keywordtype">char</span> *data, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="circular__buffer_8h.html#acc8d39eeb4e8c36b108139d024d4f5f5">circular_buffer_read</a>(<a class="code" href="structcircular__buffer.html">circular_buffer</a> *cb, <span class="keywordtype">char</span> *data, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">size_t</span> <a class="code" href="circular__buffer_8h.html#aa43652571a861e76e55caf1e72ce267a">circular_buffer_length</a>(<a class="code" href="structcircular__buffer.html">circular_buffer</a> *cb);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="circular__buffer_8h.html#a0cd04bdfe52e17890ca624e29bf5bc5e">circular_buffer_is_empty</a>(<a class="code" href="structcircular__buffer.html">circular_buffer</a> *cb);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="circular__buffer_8h.html#a54724843c12099a3c9066eba287be2f5">circular_buffer_is_full</a>(<a class="code" href="structcircular__buffer.html">circular_buffer</a> *cb);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif // CIRCULAR_BUFFER_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="acircular__buffer_8h_html_aa43652571a861e76e55caf1e72ce267a"><div class="ttname"><a href="circular__buffer_8h.html#aa43652571a861e76e55caf1e72ce267a">circular_buffer_length</a></div><div class="ttdeci">size_t circular_buffer_length(circular_buffer *cb)</div><div class="ttdoc">获取环形缓冲区中的有效数据长度</div></div>
+<div class="ttc" id="aport_8h_html"><div class="ttname"><a href="port_8h.html">port.h</a></div></div>
+<div class="ttc" id="acircular__buffer_8h_html_aaf1d119a647bd9d803c31ec96c3e2b71"><div class="ttname"><a href="circular__buffer_8h.html#aaf1d119a647bd9d803c31ec96c3e2b71">circular_buffer_free</a></div><div class="ttdeci">void circular_buffer_free(circular_buffer *cb)</div><div class="ttdoc">释放环形缓冲区资源</div></div>
+<div class="ttc" id="acircular__buffer_8h_html_a9152b651fcc9df8d25a0685ab07693c9"><div class="ttname"><a href="circular__buffer_8h.html#a9152b651fcc9df8d25a0685ab07693c9">circular_buffer_init</a></div><div class="ttdeci">bool circular_buffer_init(circular_buffer *cb, size_t size)</div><div class="ttdoc">初始化环形缓冲区</div></div>
+<div class="ttc" id="acircular__buffer_8h_html_a54724843c12099a3c9066eba287be2f5"><div class="ttname"><a href="circular__buffer_8h.html#a54724843c12099a3c9066eba287be2f5">circular_buffer_is_full</a></div><div class="ttdeci">bool circular_buffer_is_full(circular_buffer *cb)</div><div class="ttdoc">检查环形缓冲区是否已满</div></div>
+<div class="ttc" id="aport_8h_html_a6bfdd7a014fe4d4d6c392df201d822dd"><div class="ttname"><a href="port_8h.html#a6bfdd7a014fe4d4d6c392df201d822dd">mutex_t</a></div><div class="ttdeci">pthread_mutex_t mutex_t</div><div class="ttdef"><b>Definition:</b> <a href="port_8h_source.html#l00011">port.h:11</a></div></div>
+<div class="ttc" id="astructcircular__buffer_html_af585f83cf32ec2772c231ffaa4c40abd"><div class="ttname"><a href="structcircular__buffer.html#af585f83cf32ec2772c231ffaa4c40abd">circular_buffer::mutex</a></div><div class="ttdeci">mutex_t mutex</div><div class="ttdef"><b>Definition:</b> <a href="circular__buffer_8h_source.html#l00021">circular_buffer.h:21</a></div></div>
+<div class="ttc" id="astructcircular__buffer_html_aff2566f4c366b48d73479bef43ee4d2e"><div class="ttname"><a href="structcircular__buffer.html#aff2566f4c366b48d73479bef43ee4d2e">circular_buffer::buffer</a></div><div class="ttdeci">char * buffer</div><div class="ttdef"><b>Definition:</b> <a href="circular__buffer_8h_source.html#l00020">circular_buffer.h:20</a></div></div>
+<div class="ttc" id="acircular__buffer_8h_html_a183a3993dd3352b6363dbf1208c585f4"><div class="ttname"><a href="circular__buffer_8h.html#a183a3993dd3352b6363dbf1208c585f4">circular_buffer_write</a></div><div class="ttdeci">bool circular_buffer_write(circular_buffer *cb, const char *data, size_t length)</div><div class="ttdoc">向环形缓冲区写入数据</div></div>
+<div class="ttc" id="astructcircular__buffer_html_a854352f53b148adc24983a58a1866d66"><div class="ttname"><a href="structcircular__buffer.html#a854352f53b148adc24983a58a1866d66">circular_buffer::size</a></div><div class="ttdeci">size_t size</div><div class="ttdef"><b>Definition:</b> <a href="circular__buffer_8h_source.html#l00017">circular_buffer.h:17</a></div></div>
+<div class="ttc" id="astructcircular__buffer_html"><div class="ttname"><a href="structcircular__buffer.html">circular_buffer</a></div><div class="ttdoc">环形缓冲区结构体</div><div class="ttdef"><b>Definition:</b> <a href="circular__buffer_8h_source.html#l00015">circular_buffer.h:15</a></div></div>
+<div class="ttc" id="acircular__buffer_8h_html_a0cd04bdfe52e17890ca624e29bf5bc5e"><div class="ttname"><a href="circular__buffer_8h.html#a0cd04bdfe52e17890ca624e29bf5bc5e">circular_buffer_is_empty</a></div><div class="ttdeci">bool circular_buffer_is_empty(circular_buffer *cb)</div><div class="ttdoc">检查环形缓冲区是否为空</div></div>
+<div class="ttc" id="acircular__buffer_8h_html_acc8d39eeb4e8c36b108139d024d4f5f5"><div class="ttname"><a href="circular__buffer_8h.html#acc8d39eeb4e8c36b108139d024d4f5f5">circular_buffer_read</a></div><div class="ttdeci">bool circular_buffer_read(circular_buffer *cb, char *data, size_t length)</div><div class="ttdoc">从环形缓冲区读取数据</div></div>
+<div class="ttc" id="astructcircular__buffer_html_a52a8a99bfbb1c17e94e3a9f816d8f5ee"><div class="ttname"><a href="structcircular__buffer.html#a52a8a99bfbb1c17e94e3a9f816d8f5ee">circular_buffer::start</a></div><div class="ttdeci">size_t start</div><div class="ttdef"><b>Definition:</b> <a href="circular__buffer_8h_source.html#l00018">circular_buffer.h:18</a></div></div>
+<div class="ttc" id="astructcircular__buffer_html_aca05b1afbbe1c83cf087b49df03c441a"><div class="ttname"><a href="structcircular__buffer.html#aca05b1afbbe1c83cf087b49df03c441a">circular_buffer::end</a></div><div class="ttdeci">size_t end</div><div class="ttdef"><b>Definition:</b> <a href="circular__buffer_8h_source.html#l00019">circular_buffer.h:19</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_5443ad005f6098523d5d32322f3d6ae3.html">circular_buffer</a></li><li class="navelem"><a class="el" href="dir_997b875473bbf50876422ef25c0bab7b.html">src</a></li><li class="navelem"><a class="el" href="circular__buffer_8h.html">circular_buffer.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

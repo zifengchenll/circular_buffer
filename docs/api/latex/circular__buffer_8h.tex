@@ -1,0 +1,189 @@
+\hypertarget{circular__buffer_8h}{}\doxysection{circular\+\_\+buffer/src/circular\+\_\+buffer.h 文件参考}
+\label{circular__buffer_8h}\index{circular\_buffer/src/circular\_buffer.h@{circular\_buffer/src/circular\_buffer.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}port.\+h\char`\"{}}\newline
+circular\+\_\+buffer.\+h 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{circular__buffer_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{结构体}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcircular__buffer}{circular\+\_\+buffer}}
+\begin{DoxyCompactList}\small\item\em 环形缓冲区结构体 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{circular__buffer_8h_a38282810aad13589aaacca767acaca43}{C\+I\+R\+C\+U\+L\+A\+R\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+O\+V\+E\+R\+W\+R\+I\+TE}}~0
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{circular__buffer_8h_a9152b651fcc9df8d25a0685ab07693c9}{circular\+\_\+buffer\+\_\+init}} (\mbox{\hyperlink{structcircular__buffer}{circular\+\_\+buffer}} $\ast$cb, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em 初始化环形缓冲区 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{circular__buffer_8h_aaf1d119a647bd9d803c31ec96c3e2b71}{circular\+\_\+buffer\+\_\+free}} (\mbox{\hyperlink{structcircular__buffer}{circular\+\_\+buffer}} $\ast$cb)
+\begin{DoxyCompactList}\small\item\em 释放环形缓冲区资源 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{circular__buffer_8h_a183a3993dd3352b6363dbf1208c585f4}{circular\+\_\+buffer\+\_\+write}} (\mbox{\hyperlink{structcircular__buffer}{circular\+\_\+buffer}} $\ast$cb, const char $\ast$data, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em 向环形缓冲区写入数据 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{circular__buffer_8h_acc8d39eeb4e8c36b108139d024d4f5f5}{circular\+\_\+buffer\+\_\+read}} (\mbox{\hyperlink{structcircular__buffer}{circular\+\_\+buffer}} $\ast$cb, char $\ast$data, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em 从环形缓冲区读取数据 \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{circular__buffer_8h_aa43652571a861e76e55caf1e72ce267a}{circular\+\_\+buffer\+\_\+length}} (\mbox{\hyperlink{structcircular__buffer}{circular\+\_\+buffer}} $\ast$cb)
+\begin{DoxyCompactList}\small\item\em 获取环形缓冲区中的有效数据长度 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{circular__buffer_8h_a0cd04bdfe52e17890ca624e29bf5bc5e}{circular\+\_\+buffer\+\_\+is\+\_\+empty}} (\mbox{\hyperlink{structcircular__buffer}{circular\+\_\+buffer}} $\ast$cb)
+\begin{DoxyCompactList}\small\item\em 检查环形缓冲区是否为空 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{circular__buffer_8h_a54724843c12099a3c9066eba287be2f5}{circular\+\_\+buffer\+\_\+is\+\_\+full}} (\mbox{\hyperlink{structcircular__buffer}{circular\+\_\+buffer}} $\ast$cb)
+\begin{DoxyCompactList}\small\item\em 检查环形缓冲区是否已满 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{circular__buffer_8h_a38282810aad13589aaacca767acaca43}\label{circular__buffer_8h_a38282810aad13589aaacca767acaca43}} 
+\index{circular\_buffer.h@{circular\_buffer.h}!CIRCULAR\_BUFFER\_OVERWRITE@{CIRCULAR\_BUFFER\_OVERWRITE}}
+\index{CIRCULAR\_BUFFER\_OVERWRITE@{CIRCULAR\_BUFFER\_OVERWRITE}!circular\_buffer.h@{circular\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{CIRCULAR\_BUFFER\_OVERWRITE}{CIRCULAR\_BUFFER\_OVERWRITE}}
+{\footnotesize\ttfamily \#define C\+I\+R\+C\+U\+L\+A\+R\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+O\+V\+E\+R\+W\+R\+I\+TE~0}
+
+
+
+在文件 circular\+\_\+buffer.\+h 第 10 行定义.
+
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{circular__buffer_8h_aaf1d119a647bd9d803c31ec96c3e2b71}\label{circular__buffer_8h_aaf1d119a647bd9d803c31ec96c3e2b71}} 
+\index{circular\_buffer.h@{circular\_buffer.h}!circular\_buffer\_free@{circular\_buffer\_free}}
+\index{circular\_buffer\_free@{circular\_buffer\_free}!circular\_buffer.h@{circular\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{circular\_buffer\_free()}{circular\_buffer\_free()}}
+{\footnotesize\ttfamily void circular\+\_\+buffer\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcircular__buffer}{circular\+\_\+buffer}} $\ast$}]{cb }\end{DoxyParamCaption})}
+
+
+
+释放环形缓冲区资源 
+
+
+\begin{DoxyParams}{参数}
+{\em cb} & 环形缓冲区结构体指针 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{circular__buffer_8h_a9152b651fcc9df8d25a0685ab07693c9}\label{circular__buffer_8h_a9152b651fcc9df8d25a0685ab07693c9}} 
+\index{circular\_buffer.h@{circular\_buffer.h}!circular\_buffer\_init@{circular\_buffer\_init}}
+\index{circular\_buffer\_init@{circular\_buffer\_init}!circular\_buffer.h@{circular\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{circular\_buffer\_init()}{circular\_buffer\_init()}}
+{\footnotesize\ttfamily bool circular\+\_\+buffer\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcircular__buffer}{circular\+\_\+buffer}} $\ast$}]{cb,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+初始化环形缓冲区 
+
+
+\begin{DoxyParams}{参数}
+{\em cb} & 环形缓冲区结构体指针 \\
+\hline
+{\em size} & 缓冲区大小（必须为2的幂次） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+成功返回true，失败返回false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{circular__buffer_8h_a0cd04bdfe52e17890ca624e29bf5bc5e}\label{circular__buffer_8h_a0cd04bdfe52e17890ca624e29bf5bc5e}} 
+\index{circular\_buffer.h@{circular\_buffer.h}!circular\_buffer\_is\_empty@{circular\_buffer\_is\_empty}}
+\index{circular\_buffer\_is\_empty@{circular\_buffer\_is\_empty}!circular\_buffer.h@{circular\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{circular\_buffer\_is\_empty()}{circular\_buffer\_is\_empty()}}
+{\footnotesize\ttfamily bool circular\+\_\+buffer\+\_\+is\+\_\+empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcircular__buffer}{circular\+\_\+buffer}} $\ast$}]{cb }\end{DoxyParamCaption})}
+
+
+
+检查环形缓冲区是否为空 
+
+
+\begin{DoxyParams}{参数}
+{\em cb} & 环形缓冲区结构体指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+为空返回true，不为空返回false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{circular__buffer_8h_a54724843c12099a3c9066eba287be2f5}\label{circular__buffer_8h_a54724843c12099a3c9066eba287be2f5}} 
+\index{circular\_buffer.h@{circular\_buffer.h}!circular\_buffer\_is\_full@{circular\_buffer\_is\_full}}
+\index{circular\_buffer\_is\_full@{circular\_buffer\_is\_full}!circular\_buffer.h@{circular\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{circular\_buffer\_is\_full()}{circular\_buffer\_is\_full()}}
+{\footnotesize\ttfamily bool circular\+\_\+buffer\+\_\+is\+\_\+full (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcircular__buffer}{circular\+\_\+buffer}} $\ast$}]{cb }\end{DoxyParamCaption})}
+
+
+
+检查环形缓冲区是否已满 
+
+
+\begin{DoxyParams}{参数}
+{\em cb} & 环形缓冲区结构体指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+已满返回true，未满返回false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{circular__buffer_8h_aa43652571a861e76e55caf1e72ce267a}\label{circular__buffer_8h_aa43652571a861e76e55caf1e72ce267a}} 
+\index{circular\_buffer.h@{circular\_buffer.h}!circular\_buffer\_length@{circular\_buffer\_length}}
+\index{circular\_buffer\_length@{circular\_buffer\_length}!circular\_buffer.h@{circular\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{circular\_buffer\_length()}{circular\_buffer\_length()}}
+{\footnotesize\ttfamily size\+\_\+t circular\+\_\+buffer\+\_\+length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcircular__buffer}{circular\+\_\+buffer}} $\ast$}]{cb }\end{DoxyParamCaption})}
+
+
+
+获取环形缓冲区中的有效数据长度 
+
+
+\begin{DoxyParams}{参数}
+{\em cb} & 环形缓冲区结构体指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+有效数据长度 
+\end{DoxyReturn}
+\mbox{\Hypertarget{circular__buffer_8h_acc8d39eeb4e8c36b108139d024d4f5f5}\label{circular__buffer_8h_acc8d39eeb4e8c36b108139d024d4f5f5}} 
+\index{circular\_buffer.h@{circular\_buffer.h}!circular\_buffer\_read@{circular\_buffer\_read}}
+\index{circular\_buffer\_read@{circular\_buffer\_read}!circular\_buffer.h@{circular\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{circular\_buffer\_read()}{circular\_buffer\_read()}}
+{\footnotesize\ttfamily bool circular\+\_\+buffer\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcircular__buffer}{circular\+\_\+buffer}} $\ast$}]{cb,  }\item[{char $\ast$}]{data,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+从环形缓冲区读取数据 
+
+
+\begin{DoxyParams}{参数}
+{\em cb} & 环形缓冲区结构体指针 \\
+\hline
+{\em data} & 读取数据的指针 \\
+\hline
+{\em length} & 读取数据的长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+成功返回true，失败返回false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{circular__buffer_8h_a183a3993dd3352b6363dbf1208c585f4}\label{circular__buffer_8h_a183a3993dd3352b6363dbf1208c585f4}} 
+\index{circular\_buffer.h@{circular\_buffer.h}!circular\_buffer\_write@{circular\_buffer\_write}}
+\index{circular\_buffer\_write@{circular\_buffer\_write}!circular\_buffer.h@{circular\_buffer.h}}
+\doxysubsubsection{\texorpdfstring{circular\_buffer\_write()}{circular\_buffer\_write()}}
+{\footnotesize\ttfamily bool circular\+\_\+buffer\+\_\+write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcircular__buffer}{circular\+\_\+buffer}} $\ast$}]{cb,  }\item[{const char $\ast$}]{data,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+向环形缓冲区写入数据 
+
+
+\begin{DoxyParams}{参数}
+{\em cb} & 环形缓冲区结构体指针 \\
+\hline
+{\em data} & 写入数据的指针 \\
+\hline
+{\em length} & 写入数据的长度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+成功返回true，失败返回false 
+\end{DoxyReturn}

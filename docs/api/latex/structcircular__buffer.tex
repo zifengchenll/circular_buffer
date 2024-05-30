@@ -1,0 +1,89 @@
+\hypertarget{structcircular__buffer}{}\doxysection{circular\+\_\+buffer结构体 参考}
+\label{structcircular__buffer}\index{circular\_buffer@{circular\_buffer}}
+
+
+环形缓冲区结构体  
+
+
+
+
+{\ttfamily \#include $<$circular\+\_\+buffer.\+h$>$}
+
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{structcircular__buffer_a854352f53b148adc24983a58a1866d66}{size}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structcircular__buffer_a52a8a99bfbb1c17e94e3a9f816d8f5ee}{start}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structcircular__buffer_aca05b1afbbe1c83cf087b49df03c441a}{end}}
+\item 
+char $\ast$ \mbox{\hyperlink{structcircular__buffer_aff2566f4c366b48d73479bef43ee4d2e}{buffer}}
+\item 
+\mbox{\hyperlink{port_8h_a6bfdd7a014fe4d4d6c392df201d822dd}{mutex\+\_\+t}} \mbox{\hyperlink{structcircular__buffer_af585f83cf32ec2772c231ffaa4c40abd}{mutex}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+环形缓冲区结构体 
+
+在文件 circular\+\_\+buffer.\+h 第 15 行定义.
+
+
+
+\doxysubsection{结构体成员变量说明}
+\mbox{\Hypertarget{structcircular__buffer_aff2566f4c366b48d73479bef43ee4d2e}\label{structcircular__buffer_aff2566f4c366b48d73479bef43ee4d2e}} 
+\index{circular\_buffer@{circular\_buffer}!buffer@{buffer}}
+\index{buffer@{buffer}!circular\_buffer@{circular\_buffer}}
+\doxysubsubsection{\texorpdfstring{buffer}{buffer}}
+{\footnotesize\ttfamily char$\ast$ buffer}
+
+缓冲区数据指针 
+
+在文件 circular\+\_\+buffer.\+h 第 20 行定义.
+
+\mbox{\Hypertarget{structcircular__buffer_aca05b1afbbe1c83cf087b49df03c441a}\label{structcircular__buffer_aca05b1afbbe1c83cf087b49df03c441a}} 
+\index{circular\_buffer@{circular\_buffer}!end@{end}}
+\index{end@{end}!circular\_buffer@{circular\_buffer}}
+\doxysubsubsection{\texorpdfstring{end}{end}}
+{\footnotesize\ttfamily size\+\_\+t end}
+
+结束位置（写入位置） 
+
+在文件 circular\+\_\+buffer.\+h 第 19 行定义.
+
+\mbox{\Hypertarget{structcircular__buffer_af585f83cf32ec2772c231ffaa4c40abd}\label{structcircular__buffer_af585f83cf32ec2772c231ffaa4c40abd}} 
+\index{circular\_buffer@{circular\_buffer}!mutex@{mutex}}
+\index{mutex@{mutex}!circular\_buffer@{circular\_buffer}}
+\doxysubsubsection{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily \mbox{\hyperlink{port_8h_a6bfdd7a014fe4d4d6c392df201d822dd}{mutex\+\_\+t}} mutex}
+
+平台无关的互斥锁 
+
+在文件 circular\+\_\+buffer.\+h 第 21 行定义.
+
+\mbox{\Hypertarget{structcircular__buffer_a854352f53b148adc24983a58a1866d66}\label{structcircular__buffer_a854352f53b148adc24983a58a1866d66}} 
+\index{circular\_buffer@{circular\_buffer}!size@{size}}
+\index{size@{size}!circular\_buffer@{circular\_buffer}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily size\+\_\+t size}
+
+缓冲区大小（必须为2的幂次） 
+
+在文件 circular\+\_\+buffer.\+h 第 17 行定义.
+
+\mbox{\Hypertarget{structcircular__buffer_a52a8a99bfbb1c17e94e3a9f816d8f5ee}\label{structcircular__buffer_a52a8a99bfbb1c17e94e3a9f816d8f5ee}} 
+\index{circular\_buffer@{circular\_buffer}!start@{start}}
+\index{start@{start}!circular\_buffer@{circular\_buffer}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily size\+\_\+t start}
+
+起始位置（读取位置） 
+
+在文件 circular\+\_\+buffer.\+h 第 18 行定义.
+
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+circular\+\_\+buffer/src/\mbox{\hyperlink{circular__buffer_8h}{circular\+\_\+buffer.\+h}}\end{DoxyCompactItemize}

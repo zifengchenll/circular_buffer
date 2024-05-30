@@ -1,0 +1,134 @@
+\hypertarget{port_8h}{}\doxysection{circular\+\_\+buffer/port/port.h 文件参考}
+\label{port_8h}\index{circular\_buffer/port/port.h@{circular\_buffer/port/port.h}}
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+port.\+h 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{port_8h__incl}
+\end{center}
+\end{figure}
+此图展示该文件直接或间接的被哪些文件引用了\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{port_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{port_8h_aed581de90eb37c5e3a311b1936e7f0d6}{D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+NT}}(fmt, ...)
+\end{DoxyCompactItemize}
+\doxysubsection*{类型定义}
+\begin{DoxyCompactItemize}
+\item 
+typedef pthread\+\_\+mutex\+\_\+t \mbox{\hyperlink{port_8h_a6bfdd7a014fe4d4d6c392df201d822dd}{mutex\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{port_8h_a140404ced972d8ed005cee7cbea4c308}{mutex\+\_\+init}} (\mbox{\hyperlink{port_8h_a6bfdd7a014fe4d4d6c392df201d822dd}{mutex\+\_\+t}} $\ast$mutex)
+\begin{DoxyCompactList}\small\item\em 初始化互斥锁 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{port_8h_a6f5a9c87a9778d88b5b0ca977bee1888}{mutex\+\_\+destroy}} (\mbox{\hyperlink{port_8h_a6bfdd7a014fe4d4d6c392df201d822dd}{mutex\+\_\+t}} $\ast$mutex)
+\begin{DoxyCompactList}\small\item\em 销毁互斥锁 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{port_8h_a02638427dd92f49a4357982589ae7519}{mutex\+\_\+lock}} (\mbox{\hyperlink{port_8h_a6bfdd7a014fe4d4d6c392df201d822dd}{mutex\+\_\+t}} $\ast$mutex)
+\begin{DoxyCompactList}\small\item\em 加锁 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{port_8h_a05ccabe849d63b032f6317323da60187}{mutex\+\_\+unlock}} (\mbox{\hyperlink{port_8h_a6bfdd7a014fe4d4d6c392df201d822dd}{mutex\+\_\+t}} $\ast$mutex)
+\begin{DoxyCompactList}\small\item\em 解锁 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{port_8h_aed581de90eb37c5e3a311b1936e7f0d6}\label{port_8h_aed581de90eb37c5e3a311b1936e7f0d6}} 
+\index{port.h@{port.h}!DEBUG\_PRINT@{DEBUG\_PRINT}}
+\index{DEBUG\_PRINT@{DEBUG\_PRINT}!port.h@{port.h}}
+\doxysubsubsection{\texorpdfstring{DEBUG\_PRINT}{DEBUG\_PRINT}}
+{\footnotesize\ttfamily \#define D\+E\+B\+U\+G\+\_\+\+P\+R\+I\+NT(\begin{DoxyParamCaption}\item[{}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+在文件 port.\+h 第 63 行定义.
+
+
+
+\doxysubsection{类型定义说明}
+\mbox{\Hypertarget{port_8h_a6bfdd7a014fe4d4d6c392df201d822dd}\label{port_8h_a6bfdd7a014fe4d4d6c392df201d822dd}} 
+\index{port.h@{port.h}!mutex\_t@{mutex\_t}}
+\index{mutex\_t@{mutex\_t}!port.h@{port.h}}
+\doxysubsubsection{\texorpdfstring{mutex\_t}{mutex\_t}}
+{\footnotesize\ttfamily typedef pthread\+\_\+mutex\+\_\+t \mbox{\hyperlink{port_8h_a6bfdd7a014fe4d4d6c392df201d822dd}{mutex\+\_\+t}}}
+
+
+
+在文件 port.\+h 第 11 行定义.
+
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{port_8h_a6f5a9c87a9778d88b5b0ca977bee1888}\label{port_8h_a6f5a9c87a9778d88b5b0ca977bee1888}} 
+\index{port.h@{port.h}!mutex\_destroy@{mutex\_destroy}}
+\index{mutex\_destroy@{mutex\_destroy}!port.h@{port.h}}
+\doxysubsubsection{\texorpdfstring{mutex\_destroy()}{mutex\_destroy()}}
+{\footnotesize\ttfamily void mutex\+\_\+destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{port_8h_a6bfdd7a014fe4d4d6c392df201d822dd}{mutex\+\_\+t}} $\ast$}]{mutex }\end{DoxyParamCaption})}
+
+
+
+销毁互斥锁 
+
+
+\begin{DoxyParams}{参数}
+{\em mutex} & 互斥锁指针 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{port_8h_a140404ced972d8ed005cee7cbea4c308}\label{port_8h_a140404ced972d8ed005cee7cbea4c308}} 
+\index{port.h@{port.h}!mutex\_init@{mutex\_init}}
+\index{mutex\_init@{mutex\_init}!port.h@{port.h}}
+\doxysubsubsection{\texorpdfstring{mutex\_init()}{mutex\_init()}}
+{\footnotesize\ttfamily bool mutex\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{port_8h_a6bfdd7a014fe4d4d6c392df201d822dd}{mutex\+\_\+t}} $\ast$}]{mutex }\end{DoxyParamCaption})}
+
+
+
+初始化互斥锁 
+
+
+\begin{DoxyParams}{参数}
+{\em mutex} & 互斥锁指针 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+成功返回true，失败返回false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{port_8h_a02638427dd92f49a4357982589ae7519}\label{port_8h_a02638427dd92f49a4357982589ae7519}} 
+\index{port.h@{port.h}!mutex\_lock@{mutex\_lock}}
+\index{mutex\_lock@{mutex\_lock}!port.h@{port.h}}
+\doxysubsubsection{\texorpdfstring{mutex\_lock()}{mutex\_lock()}}
+{\footnotesize\ttfamily void mutex\+\_\+lock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{port_8h_a6bfdd7a014fe4d4d6c392df201d822dd}{mutex\+\_\+t}} $\ast$}]{mutex }\end{DoxyParamCaption})}
+
+
+
+加锁 
+
+
+\begin{DoxyParams}{参数}
+{\em mutex} & 互斥锁指针 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{port_8h_a05ccabe849d63b032f6317323da60187}\label{port_8h_a05ccabe849d63b032f6317323da60187}} 
+\index{port.h@{port.h}!mutex\_unlock@{mutex\_unlock}}
+\index{mutex\_unlock@{mutex\_unlock}!port.h@{port.h}}
+\doxysubsubsection{\texorpdfstring{mutex\_unlock()}{mutex\_unlock()}}
+{\footnotesize\ttfamily void mutex\+\_\+unlock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{port_8h_a6bfdd7a014fe4d4d6c392df201d822dd}{mutex\+\_\+t}} $\ast$}]{mutex }\end{DoxyParamCaption})}
+
+
+
+解锁 
+
+
+\begin{DoxyParams}{参数}
+{\em mutex} & 互斥锁指针 \\
+\hline
+\end{DoxyParams}

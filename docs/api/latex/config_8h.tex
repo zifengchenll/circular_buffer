@@ -1,0 +1,74 @@
+\hypertarget{config_8h}{}\doxysection{circular\+\_\+buffer/port/config.h 文件参考}
+\label{config_8h}\index{circular\_buffer/port/config.h@{circular\_buffer/port/config.h}}
+
+
+平台和功能设置的配置头文件  
+
+
+此图展示该文件直接或间接的被哪些文件引用了\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{config_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{config_8h_affcc3790504b838f9ce56a008cce0950}{P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+L\+I\+N\+UX}}~1
+\begin{DoxyCompactList}\small\item\em 选择\+Linux平台 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{config_8h_a432138093c53d7580af9ec5c5dca387f}{E\+N\+A\+B\+L\+E\+\_\+\+D\+E\+B\+UG}}~0
+\begin{DoxyCompactList}\small\item\em 调试开关 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{config_8h_a403b36f411348873e5e1ff9b530ae60f}{E\+N\+A\+B\+L\+E\+\_\+\+L\+O\+CK}}~1
+\begin{DoxyCompactList}\small\item\em 锁开关 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+平台和功能设置的配置头文件 
+
+本文件包含选择平台、启用或禁用调试以及切换锁使用的宏。 根据具体项目需求调整这些设置。 
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{config_8h_a432138093c53d7580af9ec5c5dca387f}\label{config_8h_a432138093c53d7580af9ec5c5dca387f}} 
+\index{config.h@{config.h}!ENABLE\_DEBUG@{ENABLE\_DEBUG}}
+\index{ENABLE\_DEBUG@{ENABLE\_DEBUG}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{ENABLE\_DEBUG}{ENABLE\_DEBUG}}
+{\footnotesize\ttfamily \#define E\+N\+A\+B\+L\+E\+\_\+\+D\+E\+B\+UG~0}
+
+
+
+调试开关 
+
+定义此宏以启用或禁用调试功能。 设置为0以禁用调试，设置为1以启用调试。 当启用调试功能时，系统会输出调试信息，有助于开发和排错。 
+
+在文件 config.\+h 第 49 行定义.
+
+\mbox{\Hypertarget{config_8h_a403b36f411348873e5e1ff9b530ae60f}\label{config_8h_a403b36f411348873e5e1ff9b530ae60f}} 
+\index{config.h@{config.h}!ENABLE\_LOCK@{ENABLE\_LOCK}}
+\index{ENABLE\_LOCK@{ENABLE\_LOCK}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{ENABLE\_LOCK}{ENABLE\_LOCK}}
+{\footnotesize\ttfamily \#define E\+N\+A\+B\+L\+E\+\_\+\+L\+O\+CK~1}
+
+
+
+锁开关 
+
+定义此宏以启用或禁用锁功能。 设置为0以禁用锁，设置为1以启用锁。 锁功能用于保护共享资源，避免多线程或多任务环境中的数据竞争问题。 
+
+在文件 config.\+h 第 59 行定义.
+
+\mbox{\Hypertarget{config_8h_affcc3790504b838f9ce56a008cce0950}\label{config_8h_affcc3790504b838f9ce56a008cce0950}} 
+\index{config.h@{config.h}!PLATFORM\_LINUX@{PLATFORM\_LINUX}}
+\index{PLATFORM\_LINUX@{PLATFORM\_LINUX}!config.h@{config.h}}
+\doxysubsubsection{\texorpdfstring{PLATFORM\_LINUX}{PLATFORM\_LINUX}}
+{\footnotesize\ttfamily \#define P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+L\+I\+N\+UX~1}
+
+
+
+选择\+Linux平台 
+
+定义此宏以选择\+Linux平台。 将此宏的值设置为1以启用\+Linux平台相关的功能和配置。 
+
+在文件 config.\+h 第 19 行定义.
+

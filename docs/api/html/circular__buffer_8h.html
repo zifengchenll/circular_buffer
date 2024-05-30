@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>circular_buffer api: circular_buffer/src/circular_buffer.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">circular_buffer api
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('circular__buffer_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">circular_buffer.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="port_8h_source.html">port.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+circular_buffer.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="circular__buffer_8h__incl.png" border="0" usemap="#circular__buffer_2src_2circular__buffer_8h" alt=""/></div>
+<map name="circular__buffer_2src_2circular__buffer_8h" id="circular__buffer_2src_2circular__buffer_8h">
+<area shape="rect" title=" " alt="" coords="20,5,159,47"/>
+<area shape="rect" title=" " alt="" coords="5,169,88,196"/>
+<area shape="rect" title=" " alt="" coords="52,95,127,121"/>
+<area shape="rect" href="port_8h.html" title=" " alt="" coords="151,95,211,121"/>
+<area shape="rect" href="config_8h.html" title="平台和功能设置的配置头文件" alt="" coords="129,169,202,196"/>
+<area shape="rect" title=" " alt="" coords="226,169,310,196"/>
+</map>
+</div>
+</div>
+<p><a href="circular__buffer_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcircular__buffer.html">circular_buffer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">环形缓冲区结构体  <a href="structcircular__buffer.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a38282810aad13589aaacca767acaca43"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="circular__buffer_8h.html#a38282810aad13589aaacca767acaca43">CIRCULAR_BUFFER_OVERWRITE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a38282810aad13589aaacca767acaca43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a9152b651fcc9df8d25a0685ab07693c9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="circular__buffer_8h.html#a9152b651fcc9df8d25a0685ab07693c9">circular_buffer_init</a> (<a class="el" href="structcircular__buffer.html">circular_buffer</a> *cb, size_t size)</td></tr>
+<tr class="memdesc:a9152b651fcc9df8d25a0685ab07693c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化环形缓冲区  <a href="circular__buffer_8h.html#a9152b651fcc9df8d25a0685ab07693c9">更多...</a><br /></td></tr>
+<tr class="separator:a9152b651fcc9df8d25a0685ab07693c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf1d119a647bd9d803c31ec96c3e2b71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="circular__buffer_8h.html#aaf1d119a647bd9d803c31ec96c3e2b71">circular_buffer_free</a> (<a class="el" href="structcircular__buffer.html">circular_buffer</a> *cb)</td></tr>
+<tr class="memdesc:aaf1d119a647bd9d803c31ec96c3e2b71"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放环形缓冲区资源  <a href="circular__buffer_8h.html#aaf1d119a647bd9d803c31ec96c3e2b71">更多...</a><br /></td></tr>
+<tr class="separator:aaf1d119a647bd9d803c31ec96c3e2b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a183a3993dd3352b6363dbf1208c585f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="circular__buffer_8h.html#a183a3993dd3352b6363dbf1208c585f4">circular_buffer_write</a> (<a class="el" href="structcircular__buffer.html">circular_buffer</a> *cb, const char *data, size_t length)</td></tr>
+<tr class="memdesc:a183a3993dd3352b6363dbf1208c585f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">向环形缓冲区写入数据  <a href="circular__buffer_8h.html#a183a3993dd3352b6363dbf1208c585f4">更多...</a><br /></td></tr>
+<tr class="separator:a183a3993dd3352b6363dbf1208c585f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc8d39eeb4e8c36b108139d024d4f5f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="circular__buffer_8h.html#acc8d39eeb4e8c36b108139d024d4f5f5">circular_buffer_read</a> (<a class="el" href="structcircular__buffer.html">circular_buffer</a> *cb, char *data, size_t length)</td></tr>
+<tr class="memdesc:acc8d39eeb4e8c36b108139d024d4f5f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">从环形缓冲区读取数据  <a href="circular__buffer_8h.html#acc8d39eeb4e8c36b108139d024d4f5f5">更多...</a><br /></td></tr>
+<tr class="separator:acc8d39eeb4e8c36b108139d024d4f5f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa43652571a861e76e55caf1e72ce267a"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="circular__buffer_8h.html#aa43652571a861e76e55caf1e72ce267a">circular_buffer_length</a> (<a class="el" href="structcircular__buffer.html">circular_buffer</a> *cb)</td></tr>
+<tr class="memdesc:aa43652571a861e76e55caf1e72ce267a"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取环形缓冲区中的有效数据长度  <a href="circular__buffer_8h.html#aa43652571a861e76e55caf1e72ce267a">更多...</a><br /></td></tr>
+<tr class="separator:aa43652571a861e76e55caf1e72ce267a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cd04bdfe52e17890ca624e29bf5bc5e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="circular__buffer_8h.html#a0cd04bdfe52e17890ca624e29bf5bc5e">circular_buffer_is_empty</a> (<a class="el" href="structcircular__buffer.html">circular_buffer</a> *cb)</td></tr>
+<tr class="memdesc:a0cd04bdfe52e17890ca624e29bf5bc5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查环形缓冲区是否为空  <a href="circular__buffer_8h.html#a0cd04bdfe52e17890ca624e29bf5bc5e">更多...</a><br /></td></tr>
+<tr class="separator:a0cd04bdfe52e17890ca624e29bf5bc5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54724843c12099a3c9066eba287be2f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="circular__buffer_8h.html#a54724843c12099a3c9066eba287be2f5">circular_buffer_is_full</a> (<a class="el" href="structcircular__buffer.html">circular_buffer</a> *cb)</td></tr>
+<tr class="memdesc:a54724843c12099a3c9066eba287be2f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查环形缓冲区是否已满  <a href="circular__buffer_8h.html#a54724843c12099a3c9066eba287be2f5">更多...</a><br /></td></tr>
+<tr class="separator:a54724843c12099a3c9066eba287be2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a38282810aad13589aaacca767acaca43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38282810aad13589aaacca767acaca43">&#9670;&nbsp;</a></span>CIRCULAR_BUFFER_OVERWRITE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CIRCULAR_BUFFER_OVERWRITE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="circular__buffer_8h_source.html">circular_buffer.h</a> 第 <a class="el" href="circular__buffer_8h_source.html#l00010">10</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="aaf1d119a647bd9d803c31ec96c3e2b71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf1d119a647bd9d803c31ec96c3e2b71">&#9670;&nbsp;</a></span>circular_buffer_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void circular_buffer_free </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcircular__buffer.html">circular_buffer</a> *&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放环形缓冲区资源 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>环形缓冲区结构体指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9152b651fcc9df8d25a0685ab07693c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9152b651fcc9df8d25a0685ab07693c9">&#9670;&nbsp;</a></span>circular_buffer_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool circular_buffer_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcircular__buffer.html">circular_buffer</a> *&#160;</td>
+          <td class="paramname"><em>cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化环形缓冲区 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>环形缓冲区结构体指针 </td></tr>
+    <tr><td class="paramname">size</td><td>缓冲区大小（必须为2的幂次） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回true，失败返回false </dd></dl>
+
+</div>
+</div>
+<a id="a0cd04bdfe52e17890ca624e29bf5bc5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cd04bdfe52e17890ca624e29bf5bc5e">&#9670;&nbsp;</a></span>circular_buffer_is_empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool circular_buffer_is_empty </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcircular__buffer.html">circular_buffer</a> *&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查环形缓冲区是否为空 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>环形缓冲区结构体指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>为空返回true，不为空返回false </dd></dl>
+
+</div>
+</div>
+<a id="a54724843c12099a3c9066eba287be2f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54724843c12099a3c9066eba287be2f5">&#9670;&nbsp;</a></span>circular_buffer_is_full()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool circular_buffer_is_full </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcircular__buffer.html">circular_buffer</a> *&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查环形缓冲区是否已满 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>环形缓冲区结构体指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>已满返回true，未满返回false </dd></dl>
+
+</div>
+</div>
+<a id="aa43652571a861e76e55caf1e72ce267a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa43652571a861e76e55caf1e72ce267a">&#9670;&nbsp;</a></span>circular_buffer_length()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t circular_buffer_length </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcircular__buffer.html">circular_buffer</a> *&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取环形缓冲区中的有效数据长度 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>环形缓冲区结构体指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>有效数据长度 </dd></dl>
+
+</div>
+</div>
+<a id="acc8d39eeb4e8c36b108139d024d4f5f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc8d39eeb4e8c36b108139d024d4f5f5">&#9670;&nbsp;</a></span>circular_buffer_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool circular_buffer_read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcircular__buffer.html">circular_buffer</a> *&#160;</td>
+          <td class="paramname"><em>cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从环形缓冲区读取数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>环形缓冲区结构体指针 </td></tr>
+    <tr><td class="paramname">data</td><td>读取数据的指针 </td></tr>
+    <tr><td class="paramname">length</td><td>读取数据的长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回true，失败返回false </dd></dl>
+
+</div>
+</div>
+<a id="a183a3993dd3352b6363dbf1208c585f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a183a3993dd3352b6363dbf1208c585f4">&#9670;&nbsp;</a></span>circular_buffer_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool circular_buffer_write </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcircular__buffer.html">circular_buffer</a> *&#160;</td>
+          <td class="paramname"><em>cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>向环形缓冲区写入数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cb</td><td>环形缓冲区结构体指针 </td></tr>
+    <tr><td class="paramname">data</td><td>写入数据的指针 </td></tr>
+    <tr><td class="paramname">length</td><td>写入数据的长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功返回true，失败返回false </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_5443ad005f6098523d5d32322f3d6ae3.html">circular_buffer</a></li><li class="navelem"><a class="el" href="dir_997b875473bbf50876422ef25c0bab7b.html">src</a></li><li class="navelem"><a class="el" href="circular__buffer_8h.html">circular_buffer.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>
