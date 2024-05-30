@@ -5,7 +5,7 @@
 
 ![GitHub Top Language](https://img.shields.io/github/languages/top/zifengchenll/circular_buffer.svg)
 ![GitHub Language Count](https://img.shields.io/github/languages/count/zifengchenll/circular_buffer.svg)
-![GitHub Release](https://img.shields.io/github/license/tensorflow/circular_buffer.svg)
+![GitHub Release](https://img.shields.io/github/license/zifengchenll/circular_buffer.svg)
 ![GitHub Release](https://img.shields.io/github/repo-size/zifengchenll/circular_buffer.svg)
 ![GitHub Release](https://img.shields.io/github/last-commit/zifengchenll/circular_buffer.svg)
 ![GitHub Release](https://img.shields.io/github/v/release/zifengchenll/circular_buffer.svg)
